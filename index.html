@@ -3,34 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Game</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<div class="content">
-    <div class="title">
-        <h1>Welcome to Kitty CLICKER Club!</h1>
+    <div class="content">
+        <div class="title">
+            <h1>Cat Clicker!</h1>
+        </div>
+        <div class="Your_Name">
+            <label for="username"></label>
+            <input id="username" name="username" type="text" placeholder="Your Name">
+            <h1></h1>
+        </div>
     </div>
-    <div class="des">
-        <p>How to play this game: You click to get a cat, thus giving you +1 point when you fight!
-            With that you can get different cats with even more points.
-            When you think you're ready, you can fight the mega kitty.
-        </p>
-    </div>
-    <button name="kitty_added"> Start Game! / Add Kitty!</button>
-</div>
-<div class="YourCAT">
-    <h1></h1>
-    <img id="cat_photo" src="" width="100" height="100" alt="">
-</div>
-<script>
-    //add kitty
-    const cat_photo = document.getElementById("cat_photo");
-    const addCat =document.querySelector('[name=kitty_added]');
-    const image =document.querySelector('img');
-    addCat.addEventListener('click', function (e){
-        console.log('test');
-        const avatar=document.createElement("img");
-        avatar.src="https://png.pngtree.com/png-clipart/20230511/ourmid/pngtree-isolated-cat-on-white-background-png-image_7094927.png>"
-            });
-</script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+.content{
+    background-color: #8D6B94;
+    width: 800px;
+    height: 800px;
+    position: relative;
+    left: 20%;
+
+}
+input[type="text"], textarea, select{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    border: 10px solid #E8DBC5;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    background-c
+    display : flex;
+    flex-direction: column;
+}
+.title{
+    color: #747474;
+    background-color: #fdfdfd;
+    width: 170px;
+    position: relative;
+    left: 27%;
+    border: 10px solid #E8DBC5;
+    border-radius: 26px;
+}
+
+h1{
+
+}
