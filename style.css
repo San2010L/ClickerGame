@@ -1,9 +1,7 @@
-.content{
+.GameContent{
     background-color: #8D6B94;
     width: 800px;
     height: 800px;
-    position: relative;
-    left: 20%;
 
 }
 input[type="text"], textarea, select{
@@ -17,7 +15,7 @@ input[type="text"], textarea, select{
     display : flex;
     flex-direction: column;
 }
-.title{
+.GameTitle{
     color: #747474;
     background-color: #fdfdfd;
     width: 170px;
@@ -26,7 +24,14 @@ input[type="text"], textarea, select{
     border: 10px solid #E8DBC5;
     border-radius: 26px;
 }
+.StoreContent{
+    background-color: #8D6B94;
+    width: 400px;
+    height: 800px;
+    position: relative;
+    left: 807px;
+    top: -820px;
 
-h1{
-
+}
+.WholeGame{
 }
