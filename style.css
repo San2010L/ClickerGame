@@ -27,7 +27,7 @@ input[type="text"], textarea, select{
 .StoreContent{
     background-color: #c3a29e;
     width: 400px;
-    height: 800px;
+    height: 300px;
     position: relative;
     left: 807px;
     top: -800px;
@@ -63,4 +63,13 @@ input[type="text"], textarea, select{
     position: absolute;
     top: 200px;
     left: 160px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    position: absolute;
+    left: 19%;
+    top: 150px;
+
 }
