@@ -34,19 +34,26 @@
             <h3 id="scoreboard">0</h3>
         </div>
         <div class="Cat-Jpeg">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3m7LqLTPOPcEm32Qb_iqvJAQAJmrUaYhxIg&s" alt="cat" width="500px" height="450">
+            <img id="catImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8K9TdeuJNHtTMH-JaUph5CgQ7P1nYgx8z9w&s" alt="cat" width="500px" height="450">
         </div>
         <div class="fighting_ring">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQexaWZMsnCUycGYWWvTnKq5GxE16auJGd1yulOzUGwhCJAlVQZSDbZcyPZBQ5sv21WXjKgcW4oov6Yvw_rfNbTnnQ5ULAkrFVDbWv2AcKqsAZKmffi4aFrxg" width="600" height="400">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQexaWZMsnCUycGYWWvTnKq5GxE16auJGd1yulOzUGwhCJAlVQZSDbZcyPZBQ5sv21WXjKgcW4oov6Yvw_rfNbTnnQ5ULAkrFVDbWv2AcKqsAZKmffi4aFrxg" width="600" height="500">
         </div>
     </div>
 <script>
-    const avatar=document.querySelector('img');
-    const score_text=document.getElementById('scoreboard');
-
+    const avatar=document.querySelector("#catImage");
+    const score_text=document.getElementById("#scoreboard");
+//for the scoreboard//
     avatar.addEventListener('click', function(e){
         console.log('cat');
+        first_Cat()
     })
+//to get a new cat
+    function first_Cat(){
+        avatar.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReSldVNa2H07vJ4M62kDbEVmW4FOar7Xc0oQ&s>"
+    }
+
+
 </script>
 </body>
 </html>

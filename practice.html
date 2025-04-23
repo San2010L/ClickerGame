@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img id="imageid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYFllRIb8ZxcxWISirhlRPF5X2qWUBrqv2A&s" height="300" width="300">
+<br>
+<button onClick="FirstImage()">First Image</button>
+<button onClick="SecondImage()">Second Image</button>
+
+<script>
+    const myImage=document.querySelector("#imageid");
+
+    function FirstImage(){
+        myImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReSldVNa2H07vJ4M62kDbEVmW4FOar7Xc0oQ&s";
+    }
+</script>
+</body>
+</html>

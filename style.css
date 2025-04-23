@@ -74,6 +74,6 @@ input[type="text"], textarea, select{
 }
 .fighting_ring{
     position: absolute;
-    top: 400px;
+    top: 300px;
     left: 800px;
 }
