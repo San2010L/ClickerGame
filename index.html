@@ -17,6 +17,7 @@
                 <h1></h1>
             </div>
         </div>
+        <button  onclick="first_Cat()" id="startGame">Start Game!</button>
 
         <div class="StoreContent">
             <div class="StoreTitle">
@@ -43,10 +44,10 @@
 <script>
     const avatar=document.querySelector("#catImage");
     const score=document.getElementById("#scoreboard");
+    const scoreboard=document.querySelector('.ScoreBoard');
 //for the scoreboard//
     avatar.addEventListener('click', function(e){
         console.log('cat');
-        first_Cat()
         Click()
     })
 //to get a new cat
@@ -55,7 +56,10 @@
     }
 
     function Click(){
+        let first = 0;
+        let sum = first++;
 
+        scoreboard.innerHTML= sum;
     }
 
 
