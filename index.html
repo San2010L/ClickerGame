@@ -6,60 +6,43 @@
     <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <div class="WholeGame">
-        <div class="GameContent">
-            <div class="GameTitle">
-                <h1>Cat Clicker!</h1>
-            </div>
-            <div class="Your_Name">
-                <label for="username"></label>
-                <input id="username" name="username" type="text" placeholder="Your Name">
-                <h1></h1>
-            </div>
+<div class="Whole_game">
+    <div class="content">
+        <h1>Choose your Cat!</h1>
+        <div class="buttons">
+            <button onClick="CatOne()"> #1 </button>
+            <button onClick="CatTwo()"> #2 </button>
+            <button onClick="CatThree()"> #3 </button>
+            <button onclick="PickOne()">Select</button>
         </div>
-        <button  onclick="first_Cat()" id="startGame">Start Game!</button>
-
-        <div class="StoreContent">
-            <div class="StoreTitle">
-                <h1>Store</h1>
-            </div>
-            <div class="buttons">
-                <button>Double Points</button>
-                <button>Triple Points</button>
-                <button>New Treat</button>
-                <button>New Cat</button>
-                <button>Fight</button>
-            </div>
-        </div>
-        <div class="ScoreBoard">
-            <h3 id="scoreboard">0</h3>
-        </div>
-        <div class="Cat-Jpeg">
-            <img id="catImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8K9TdeuJNHtTMH-JaUph5CgQ7P1nYgx8z9w&s" alt="cat" width="500px" height="450">
-        </div>
-        <div class="fighting_ring">
-            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQexaWZMsnCUycGYWWvTnKq5GxE16auJGd1yulOzUGwhCJAlVQZSDbZcyPZBQ5sv21WXjKgcW4oov6Yvw_rfNbTnnQ5ULAkrFVDbWv2AcKqsAZKmffi4aFrxg" width="600" height="500">
+        <div class="image StartCat">
+            <img id="OneCat" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWLVqf7-MnQwKnFq7m824zAmNpw_lCHs8Utw&s">
+            <h3 id="description_cat"></h3>
         </div>
     </div>
+</div>
 <script>
-    const avatar=document.querySelector("#catImage");
-    const score=document.getElementById("#scoreboard");
-    const scoreboard=document.querySelector('.ScoreBoard');
-//for the scoreboard//
-    avatar.addEventListener('click', function(e){
-        console.log('cat');
-        Click()
-    })
-//to get a new cat
-    function first_Cat(){
-        avatar.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReSldVNa2H07vJ4M62kDbEVmW4FOar7Xc0oQ&s>"
+    const startImage=document.querySelector("#OneCat");
+    const description=document.querySelector("#description_cat");
+    function CatOne(){
+        startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFTgCKjwBY2T_Is23SmmxbHbEi9Vx7SX1ghQ&s";
+        description.innerHTML='<h3> Bob: He is your average cat. Gives one point per click, even though he may not have much smarts, he can endure a lot.</h3>'
     }
 
-    function Click(){
-        let first = 0;
-        let sum = first++;
+    function CatTwo(){
+        startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbtMDzgdOu-OKq_SDDvKZ7agMWsfsbhGGAiJ9KlypzbHsjSBCJ4CaI-XquNmdfL-rZVM&usqp=CAU";
+        description.innerHTML='<h3> Amy and carl: Double trouble, they give off 2 points per click. they are more demanding and strong, will you be able to keep up with the twins? </h3>'
+    }
 
-        scoreboard.innerHTML= sum;
+    function CatThree(){
+        startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdKWRzMqJLZ5zoSRVPbriOJ4Ynu79Ajsk0BO7uxm_httu84rJ4u6CRVOoG14uSUIhEYuE&usqp=CAU";
+        description.innerHTML='<h3> Axel : Angry cat. Will find an excuse to spar the other cats. much stronger in combat, but weaker in points per click; 1/2 per click.</h3>'
+    }
+    function PickOne(){
+        const unwanted_buttons=document.querySelector(".buttons")
+        unwanted_buttons.remove();
+        description.remove();
+        startImage.src="";
     }
 
 
