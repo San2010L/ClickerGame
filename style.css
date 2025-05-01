@@ -1,0 +1,36 @@
+.container{
+    width: 530px;
+    height: 500px;
+    background-color: antiquewhite;
+    position: absolute;
+    left: 325px;
+    top: 200px;
+}
+.starting-content{
+    position: absolute;
+    left: 470px;
+    top: 320px;
+}
+.buttons{
+    position: absolute;
+    top: -120px;
+    left: 45px;
+    display: flex;
+
+}
+.title{
+    position: absolute;
+    width: 300px;
+    top: -120px;
+}
+.UpButtons{
+    position: absolute;
+    top: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.two{
+    position: absolute;
+    left: 530px;
+    top: 100px;
+}
