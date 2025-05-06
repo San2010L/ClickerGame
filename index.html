@@ -10,8 +10,8 @@
     <div class="content">
         <div class="container">
             <div class="UpButtons one">
-                <button>2x points (100 power)</button>
-                <button>3x points (500 power)</button>
+                <button>2x points (100 points)</button>
+                <button>3x points (500 points)</button>
                 <button>5x points (1000 points)</button>
                 <button>10x points (5000 points)</button>
             </div>
@@ -22,7 +22,7 @@
                 <button>Reset The game and loose ALL your progress</button>
             </div>
             <div class="leaderboard">
-                <h4>score =</h4>
+                <h4 id="score"> 0 </h4>
             </div>
         </div>
     </div>
@@ -44,6 +44,7 @@
 
     const startImage=document.querySelector("#OneCat");
     const description=document.querySelector("#description_cat");
+    const score=document.querySelector("#score");
     function CatOne(){
         startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFTgCKjwBY2T_Is23SmmxbHbEi9Vx7SX1ghQ&s";
         description.innerHTML='<h3> Bob.</h3>'
@@ -65,6 +66,15 @@
         title_unwanted.remove();
         description.remove();
 
+    }
+    startImage.addEventListener('click', function(e){
+     score_increase();
+    })
+    function score_increase(){
+        let firstnum =score.value;
+        let timesone = 1;
+        let sum_timesone= firstnum + timesone;
+        firstnum = sum_timesone;
     }
 
 
