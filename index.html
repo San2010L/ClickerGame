@@ -10,10 +10,10 @@
     <div class="content">
         <div class="container">
             <div class="UpButtons one">
-                <button>2x points (100 points)</button>
-                <button>3x points (500 points)</button>
-                <button>5x points (1000 points)</button>
-                <button>10x points (5000 points)</button>
+                <button id="upgrade1">2x points (100 points)</button>
+                <button id="upgrade2">3x points (300 points)</button>
+                <button id="upgrade3">5x points (700 points)</button>
+                <button id="upgrade4">10x points (5000 points)</button>
             </div>
             <div class="UpButtons two">
                 <button>New cat (231 points)</button>
@@ -41,10 +41,21 @@
     </div>
 </div>
 <script>
-
+    let upgrade1Cost = 100;
+    let upgrade2Cost= 300;
+    let upgrade3Cost= 700;
+    let upgrade4Cost = 5000;
     const startImage=document.querySelector("#OneCat");
     const description=document.querySelector("#description_cat");
     const score=document.querySelector("#score");
+    const upgrade1button = document.getElementById('upgrade1');
+    const upgrade2button = document.getElementById('upgrade2');
+    const upgrade3button = document.getElementById('upgrade3');
+    const upgrade4button = document.getElementById('upgrade4');
+
+    let scoreNum = 0;
+    let multiplier = 1;
+
     function CatOne(){
         startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFTgCKjwBY2T_Is23SmmxbHbEi9Vx7SX1ghQ&s";
         description.innerHTML='<h3> Bob.</h3>'
@@ -67,16 +78,41 @@
         description.remove();
 
     }
-    startImage.addEventListener('click', function(e){
-     score_increase();
-    })
-    function score_increase(){
-        let firstnum =score.value;
-        let timesone = 1;
-        let sum_timesone= firstnum + timesone;
-        firstnum = sum_timesone;
-    }
+    startImage.addEventListener('click', score_increase)
 
+    function score_increase(){
+        scoreNum+=multiplier;
+        score.textContent = scoreNum;
+    }
+    upgrade1button.addEventListener('click', function (){
+        if(scoreNum >= upgrade1Cost){
+            scoreNum -= upgrade1Cost;
+            multiplier = 2;
+            upgrade1button.disabled = true
+
+        }
+    })
+    upgrade2button.addEventListener('click', function(){
+        if(scoreNum >= upgrade2Cost){
+            scoreNum -= upgrade2Cost;
+            multiplier = 3;
+            upgrade2button.disabled = true
+        }
+    })
+    upgrade3button.addEventListener('click', function(){
+        if(scoreNum >= upgrade3Cost){
+            scoreNum -= upgrade3Cost;
+            multiplier = 5;
+            upgrade3button.disabled = true
+        }
+    })
+    upgrade4button.addEventListener('click', function(){
+        if(scoreNum >= upgrade4Cost){
+            scoreNum -= upgrade4Cost;
+            multiplier = 10;
+            upgrade3button.disabled = true
+        }
+    })
 
 
 
