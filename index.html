@@ -17,8 +17,8 @@
             </div>
             <div class="UpButtons two">
                 <button>New cat (231 points)</button>
-                <button>Fight a Cat (FREE)</button>
-                <button>Final Battle!(100,000)</button>
+                <button id="fight_cat">Fight a Cat (FREE)</button>
+                <button id="final_battle" >Final Battle!(100,000)</button>
                 <button>Reset The game and loose ALL your progress</button>
             </div>
             <div class="leaderboard">
@@ -52,6 +52,7 @@
     const upgrade2button = document.getElementById('upgrade2');
     const upgrade3button = document.getElementById('upgrade3');
     const upgrade4button = document.getElementById('upgrade4');
+    const fightcatbutton = document.getElementById('fight_cat');
 
     let scoreNum = 0;
     let multiplier = 1;

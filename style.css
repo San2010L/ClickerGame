@@ -1,10 +1,15 @@
+body{
+    background-color: #534834;
+}
 .container{
     width: 530px;
     height: 500px;
-    background-color: antiquewhite;
+    background-color: rgba(163, 143, 132, 0.77);
     position: absolute;
     left: 325px;
     top: 200px;
+    border-radius: 15px;
+    border: 3px solid;
 }
 .starting-content{
     position: absolute;
@@ -37,4 +42,8 @@
 .leaderboard{
     position: absolute;
     left: 20px;
+}
+.StartCat{
+    border: black solid;
+    padding: 10px;
 }
