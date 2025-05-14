@@ -35,10 +35,11 @@
             <button onclick="PickOne()">Select</button>
         </div>
         <div class="image StartCat">
-            <img id="OneCat" src="">
+            <img id="OneCat" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5fZ6RBZJLwFyEjNk-CHtHSiD9qquLEiu8AA&s">
             <h3 id="description_cat"></h3>
         </div>
     </div>
+    <img  class=" cat-fight-image" id="Cat_fight" src="https://media.tenor.com/jtAg0vlqcgAAAAAM/cat-fight.gif">
 </div>
 <script>
     let upgrade1Cost = 100;
@@ -53,6 +54,7 @@
     const upgrade3button = document.getElementById('upgrade3');
     const upgrade4button = document.getElementById('upgrade4');
     const fightcatbutton = document.getElementById('fight_cat');
+    const fight =document.getElementById('Cat_fight');
 
     let scoreNum = 0;
     let multiplier = 1;
@@ -113,6 +115,35 @@
             multiplier = 10;
             upgrade3button.disabled = true
         }
+    })
+    fightcatbutton.addEventListener('click', function(){
+            console.log("buttons works");
+
+
+        setTimeout(()=>{
+
+
+
+                fight.style.display= 'revert';
+
+            }, 500
+
+
+
+
+        );
+
+
+        setTimeout(()=>{
+
+            fight.style.display='none';
+
+        }, 3000
+
+        );
+
+
+
     })
 
 

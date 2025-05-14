@@ -5,11 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<style>
+    .image{
+        display : none;
+
+    }
+</style>
 
 <img id="imageid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYFllRIb8ZxcxWISirhlRPF5X2qWUBrqv2A&s" height="300" width="300">
 <br>
 <button onClick="FirstImage()">First Image</button>
 <button onClick="SecondImage()">Second Image</button>
+<img id="seven" class=" image "src="https://media.tenor.com/jtAg0vlqcgAAAAAM/cat-fight.gif">
 
 <script>
     const myImage=document.querySelector("#imageid");
@@ -17,6 +24,19 @@
         myImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReSldVNa2H07vJ4M62kDbEVmW4FOar7Xc0oQ&s";
 
     }
+
+    setTimeout(()=>{
+
+        const someText =document.getElementById('seven');
+
+        someText.style.display= 'revert';
+
+        }, 3000
+
+
+
+
+    );
 
 </script>
 </body>
