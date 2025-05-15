@@ -118,21 +118,7 @@
     })
     fightcatbutton.addEventListener('click', function(){
             console.log("buttons works");
-
-
-        setTimeout(()=>{
-
-
-
-                fight.style.display= 'revert';
-
-            }, 500
-
-
-
-
-        );
-
+            fight.style.display= 'revert';
 
         setTimeout(()=>{
 
@@ -145,6 +131,23 @@
 
 
     })
+
+    function randomize_score(){
+        let RandomNum = Math.floor(Math.random()* 10000) + 1;
+
+
+    }
+
+    function chance(){
+        let chance_num = Math.floor(Math.random()* 100);
+        if (chance_num <= 50){
+            //add the text here
+            //and use the Let Random Num to subtract the random reward from current score.
+        }else{
+
+        }
+    }
+
 
 
 
