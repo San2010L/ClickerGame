@@ -58,6 +58,7 @@
 
     let scoreNum = 0;
     let multiplier = 1;
+    let RandomNum = Math.floor(Math.random()* 100) + 1;
 
     function CatOne(){
         startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFTgCKjwBY2T_Is23SmmxbHbEi9Vx7SX1ghQ&s";
@@ -128,23 +129,26 @@
 
         );
 
+        chance();
+
 
 
     })
 
-    function randomize_score(){
-        let RandomNum = Math.floor(Math.random()* 10000) + 1;
 
 
-    }
+
 
     function chance(){
         let chance_num = Math.floor(Math.random()* 100);
         if (chance_num <= 50){
-            //add the text here
+            //add the text here for having points decreased
+            scoreNum -= RandomNum;
             //and use the Let Random Num to subtract the random reward from current score.
         }else{
-
+            //add the text off having points added.
+            scoreNum += RandomNum;
+            //add the points.
         }
     }
 
