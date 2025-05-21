@@ -55,3 +55,11 @@ body{
     height: 100%;
 
 }
+.nameinput{
+    position: absolute;
+    top: 330px;
+    display: flex;
+    left: 35px;
+
+}
+
