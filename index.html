@@ -39,10 +39,10 @@
             <h3 id="description_cat"></h3>
         </div>
     </div>
-    <img  class=" cat-fight-image" id="Cat_fight" src="https://media.tenor.com/jtAg0vlqcgAAAAAM/cat-fight.gif">
+    <img  class=" cat-fight-image" id="Cat_fight" src="https://media.tenor.com/pU_lYWDq3EIAAAAM/fighting-angry.gif">
 </div>
 <script>
-    let upgrade1Cost = 100;
+    let upgrade1Cost = 10;
     let upgrade2Cost= 300;
     let upgrade3Cost= 700;
     let upgrade4Cost = 5000;
@@ -119,7 +119,7 @@
     })
     fightcatbutton.addEventListener('click', function(){
             console.log("buttons works");
-            fight.style.display= 'revert';
+        fight.style.display= 'revert';
 
         setTimeout(()=>{
 
@@ -140,7 +140,7 @@
 
 
     function chance(){
-        let chance_num = Math.floor(Math.random()* 100);
+        let chance_num = Math.floor(Math.random()* 6000);
         if (chance_num <= 30){
             //add the text here for having points decreased
             scoreNum -= RandomNum;
