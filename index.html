@@ -17,7 +17,7 @@
             </div>
             <div class="UpButtons two">
                 <button id="fight_cat">Fight a Cat (10 points)</button>
-                <button id="final_battle" >Final Battle!(100,000)</button>
+                <button id="final_battle" >Beat the game!!!(100,000)</button>
             </div>
             <div class="leaderboard">
                 <h4 id="score"> 0 </h4>
@@ -39,11 +39,15 @@
     </div>
     <img  class=" cat-fight-image" id="Cat_fight" src="https://media.tenor.com/pU_lYWDq3EIAAAAM/fighting-angry.gif">
 </div>
+<div class="winning_screen">
+    <img id="winning" src="">
+</div>
 <script>
     let upgrade1Cost = 10;
     let upgrade2Cost= 300;
     let upgrade3Cost= 700;
     let upgrade4Cost = 5000;
+    const winning_image =document.querySelector("#winning");
     const startImage=document.querySelector("#OneCat");
     const description=document.querySelector("#description_cat");
     const score=document.querySelector("#score");
@@ -53,11 +57,13 @@
     const upgrade4button = document.getElementById('upgrade4');
     const fightcatbutton = document.getElementById('fight_cat');
     const fight =document.getElementById('Cat_fight');
+    const final_battle = document.getElementById('final_battle');
+    const whole_game = document.querySelector(".Whole_game");
 
 
     let scoreNum = 0;
     let multiplier = 1;
-    let RandomNum = Math.floor(Math.random()* 100) + 1;
+    let RandomNum = Math.floor(Math.random()* 1000) + 1;
 
     function CatOne(){
         startImage.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFTgCKjwBY2T_Is23SmmxbHbEi9Vx7SX1ghQ&s";
@@ -143,7 +149,7 @@
 
     function chanceone(){
         let chance_num = Math.floor(Math.random()* 100);
-        if (chance_num <= 45 ){
+        if (chance_num <= 50 ){
             //add the text here for having points decreased
             scoreNum -= RandomNum;
             //and use the Let Random Num to subtract the random reward from current score.
@@ -153,6 +159,18 @@
             //add the points.
         }
     }
+
+    final_battle.addEventListener('click', function (){
+        console.log("button clicked");
+
+        if(scoreNum>= 10000){
+            whole_game.remove();
+
+            winning_image.src="https://media.istockphoto.com/id/1447471637/video/you-win-glitch-4k-video-animation-footage-pixel-message-design-glitch-effect.jpg?s=640x640&k=20&c=JGgJOzzgHAWu33tEMYl-yghunxslgkdZGDHbqCB8KNA=";
+            scoreNum -= 10000;
+            final_battle.disabled =true;
+        }
+          })
 
 
 
